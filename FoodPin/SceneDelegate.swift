@@ -1,9 +1,3 @@
-//
-//  SceneDelegate.swift
-//  FoodPin
-//
-//  Created by 姜霽庭 on 2024/1/15.
-//
 
 import UIKit
 

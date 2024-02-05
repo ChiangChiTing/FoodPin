@@ -1,9 +1,3 @@
-//
-//  AppDelegate.swift
-//  FoodPin
-//
-//  Created by 姜霽庭 on 2024/1/15.
-//
 
 import UIKit
 
@@ -13,7 +7,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let navBarAppearance = UINavigationBarAppearance()
+        var backButtonImage = UIImage(systemName: "arrowshape.left.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 20.0, weight: .bold))
+        
+        backButtonImage = backButtonImage?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: -10, bottom: 0, right: 0))
+        
+        navBarAppearance.setBackIndicatorImage(backButtonImage, transitionMaskImage: backButtonImage)
+        
+        UINavigationBar.appearance().tintColor = .black
+        UINavigationBar.appearance().standardAppearance = navBarAppearance
+        UINavigationBar.appearance().compactAppearance = navBarAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
+        
+        
         return true
     }
 
